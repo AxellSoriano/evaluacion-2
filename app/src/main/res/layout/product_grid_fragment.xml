@@ -4,20 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProductGridFragment" >
+    android:background="@drawable/fondo3"
+    tools:context=".ProductGridFragment"
+    tools:ignore="SpeakableTextPresentCheck">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/app_bar"
+        style="@style/Widget.Maxitech.Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/red_aplication"
+        app:navigationIcon="@drawable/menu"
+
+        app:title="@string/app_name" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="170dp"
+        android:layout_height="190dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="90dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/teclados"
+            android:contentDescription="TODO" />
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="WELCOME"
-            android:textAllCaps="true"
-            android:textSize="16sp"
+            android:layout_gravity="bottom"
+            android:background="@color/black"
+            android:orientation="vertical"
+            android:padding="8dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:padding="4dp"
+                android:text="@string/text_card"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                />
 
-            />
-    </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 </FrameLayout>
